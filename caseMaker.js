@@ -15,12 +15,20 @@ const makeCase = function (input, type) {
     }
     return arr.join("");
   }
+
+  if (type === "snake") {
+    return arr.join("_");
+  }
+
+  if (type === "kebab") {
+    return arr.join("-");
+  }
 };
 
 console.log(makeCase("this is a string", "camel"));
 console.log(makeCase("this is a string", "pascal"));
-// console.log(makeCase("this is a string", "snake");
-// console.log(makeCase("this is a string", "kebab");
+console.log(makeCase("this is a string", "snake"));
+console.log(makeCase("this is a string", "kebab"));
 // console.log(makeCase("this is a string", "title");
 // console.log(makeCase("this is a string", "vowel");
 // console.log(makeCase("this is a string", "consonant");
